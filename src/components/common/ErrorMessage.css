@@ -1,0 +1,93 @@
+/* Styles pour le composant ErrorMessage */
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-2xl);
+  gap: var(--spacing-md);
+  min-height: 200px;
+}
+
+.error-message__icon {
+  color: var(--error-color);
+  opacity: 0.8;
+}
+
+.error-message__icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.error-message__title {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.error-message__description {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin: 0;
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+.error-message__retry {
+  margin-top: var(--spacing-sm);
+}
+
+/* Variantes */
+.error-message--compact {
+  padding: var(--spacing-lg);
+  min-height: auto;
+}
+
+.error-message--compact .error-message__icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.error-message--compact .error-message__title {
+  font-size: 1rem;
+}
+
+.error-message--inline {
+  flex-direction: row;
+  text-align: left;
+  padding: var(--spacing-md);
+  min-height: auto;
+  gap: var(--spacing-sm);
+}
+
+.error-message--inline .error-message__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.error-message--inline .error-message__title {
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.error-message--inline .error-message__description {
+  font-size: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .error-message {
+    padding: var(--spacing-lg);
+  }
+  
+  .error-message__icon svg {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .error-message__title {
+    font-size: 1.125rem;
+  }
+}
